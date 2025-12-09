@@ -1,0 +1,18 @@
+{"postCreateCommand": [
+    // 1. Flutter SDK 복제 (Cloning the Flutter SDK)
+    "git clone https://github.com/flutter/flutter.git /usr/local/sdk/flutter",
+
+    // 2. PATH 변수 설정을 .zshrc와 .bashrc 파일에 추가 (Adding PATH to shell config files)
+    // 이 경로는 Codespace 내 모든 쉘 세션에 영구적으로 적용됩니다.
+    "echo 'export PATH=\\\"$PATH:/usr/local/sdk/flutter/bin\\\"' >> ~/.zshrc",
+    "echo 'export PATH=\\\"$PATH:/usr/local/sdk/flutter/bin\\\"' >> ~/.bashrc",
+
+    // 3. (선택적) Flutter 안정 채널로 전환
+    // 컨테이너 빌드 후 새 터미널에서 실행될 때 PATH가 적용되도록 이 명령은 제거하거나,
+    // 새 터미널에서 수동으로 실행하는 것이 좋습니다.
+    // "/usr/local/sdk/flutter/bin/flutter channel stable",
+
+    // 4. (선택적) SDK 상태 확인
+    // PATH가 적용되지 않아 실행되지 않을 수 있으므로, 제거하거나 새 터미널에서 수동 실행하세요.
+    // "/usr/local/sdk/flutter/bin/flutter doctor" 
+]}

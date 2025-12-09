@@ -7,6 +7,8 @@ void main() {
 }
 
 class App extends StatelessWidget {
+  const App({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(title: '반응속도 테스트', home: ReactionPage());
@@ -14,6 +16,8 @@ class App extends StatelessWidget {
 }
 
 class ReactionPage extends StatefulWidget {
+  const ReactionPage({super.key});
+
   @override
   _ReactionPageState createState() => _ReactionPageState();
 }
